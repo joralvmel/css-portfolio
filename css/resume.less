@@ -1,0 +1,238 @@
+// Theme colour scheme
+@theme-color-primary: #373e49;
+@theme-text-color-primary: #434E5E;
+@theme-text-color-secondary: lighten(@theme-text-color-primary, 10%);
+@theme-text-color-light: lighten(@theme-text-color-primary, 40%);
+@theme-text-color-u-light: lighten(@theme-text-color-primary, 80%);
+@theme-border-color:  lighten(@theme-text-color-primary, 10%);
+@theme-divider-color: lighten(@theme-text-color-primary, 10%);
+@theme-bg-light: #F7F8FA;
+@theme-bg-dark: @theme-text-color-primary;
+
+/*************************** Pillar Styles ****************************/
+body {
+    font-family: 'Roboto', sans-serif;  
+    background: @theme-bg-light;
+    color: @theme-text-color-primary;
+    overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.progress-bar-dark {
+	background-color: @theme-color-primary;
+}
+
+.resume-wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.resume-wrapper-inner {
+	max-width: 1000px;
+}
+
+.resume-header {
+	background: @theme-color-primary;
+	color: @theme-text-color-u-light;
+	height: 220px;
+	
+	.picture {
+		width: 220px;
+	}
+		
+	.name {
+		font-size: 1.5rem;
+		letter-spacing: 0.1rem;	
+		font-weight: 800;
+	}
+	.title {
+		font-size: 1.1rem;
+	}
+	
+	a {
+		color: @theme-text-color-light;
+		&:hover {
+			color: @theme-text-color-u-light;
+		}
+		
+	}
+	
+}
+
+.resume-social {
+	font-size: 0.9rem;
+
+	.fa-container {
+		width: 20px;
+		height: 20px;
+	}
+
+}
+
+.resume-section-title {
+	font-size: 1.2rem;
+	position: relative;
+	color: @theme-color-primary;
+	font-weight: bold;
+	
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 1.5px;
+		background: lighten(@theme-text-color-primary, 30%);
+	}
+}
+
+.resume-section-content {
+	color: @theme-text-color-secondary;
+	text-align: justify;
+}
+
+
+.resume-timeline {
+	padding-left: 2rem;
+	&:before {
+		content: "";
+		display: inline-block;
+	    width: 4px;
+	    height: 100%;
+	    background: lighten(@theme-color-primary, 40%);
+	    left: 6px;
+	    top: 4px;
+	    position: absolute;
+	}
+}
+
+.resume-timeline-item {
+	&:before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		left: -32px;
+		top: 3px;
+		width: 15px;
+		height: 15px;
+		border: 4px solid lighten(@theme-color-primary, 10%);
+		border-radius: 50%;
+		background: white;
+		@include border-radius(50%);
+		
+	}
+}
+
+.resume-progress {
+	height: 0.6rem;
+}
+
+.resume-company-image{
+	height: 50px;
+}
+
+.resume-company-name {
+	color: @theme-text-color-secondary;
+	font-size: 0.8rem;
+	font-weight: 500;
+}
+
+.resume-position-time {
+	font-size: 0.9rem;
+	color: @theme-text-color-light;
+}
+
+.resume-position-title {
+	font-size: 1.1rem;
+	color: @theme-text-color-primary;
+	font-weight: bold;
+
+}
+
+.resume-timeline-item-desc-heading {
+	font-size: 1rem;
+}
+
+.resume-skills-cat {
+	font-size: 1rem;
+	color: @theme-text-color-primary;
+	font-weight: bold;
+}
+
+.resume-skill-name {
+	font-size: 0.8rem;
+	color: @theme-text-color-primary;
+}
+
+.badge-light {
+	color: @theme-text-color-secondary;
+	background: @theme-bg-light;
+	font-size: 0.7rem;
+}
+
+.resume-degree {
+	color: @theme-text-color-primary;
+	font-weight:bold;
+}
+.resume-degree-org {
+	font-size: 0.875rem;
+}
+.resume-degree-time {
+	color: @theme-text-color-light;
+	font-size: 0.875rem;
+}
+
+.resume-awards-list {
+}
+
+
+.resume-award-name {
+	font-weight:bold;
+	color: @theme-text-color-primary;
+	font-size: 0.8rem;
+}
+
+.resume-award-time {
+	font-size: 0.7rem;
+	color: @theme-text-color-light;
+}
+
+.resume-lang-name {
+	color: @theme-text-color-primary;
+}
+
+.footer {
+
+	.fa-heart {
+		color: #fb866a;
+	}
+}
+
+.picture {
+    width: 220px;}
+
+.list-key-responsibilities{
+	list-style-type: circle;
+}
+
+/*************************** Pillar Styles ****************************/
+@media (max-width: 768px) {
+    .resume-wrapper {
+	    padding-top: 0;
+    }
+	
+	.resume-header {
+		height: auto;
+	}
+	.resume-header .picture {
+		width: 120px;
+		@include border-radius(4px);
+	}
+}
+
